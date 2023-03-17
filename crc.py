@@ -473,7 +473,16 @@ class Crc16(enum.Enum):
         reverse_input=False,
         reverse_output=False,
     )
-
+    
+    X25 = Configuration(
+        width=16,
+        polynomial=0x1021,
+        init_value=0xFFFF,
+        final_xor_value=0xFFFF,
+        reverse_input=True,
+        reverse_output=True,
+    )
+    
     GSM = Configuration(
         width=16,
         polynomial=0x1021,
